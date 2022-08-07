@@ -1,19 +1,19 @@
 <template>
   <div class="login">
     <div class="container">
-      <h1>Please Login</h1>
+      <h1>欢迎来到人脸点名系统</h1>
       <form>
         <div class="form-control">
           <input type="text" required />
-          <label>Account</label>
+          <label>账号:</label>
         </div>
         <div class="form-control">
           <input type="password" required />
-          <label>Password</label>
+          <label>密码:</label>
         </div>
 
-        <button class="btn">Login</button>
-        <p>Don't have an account? <a href="#">Register</a></p>
+        <button class="btn">登录</button>
+        <p>还没有账号? <a href="#">点击注册</a></p>
       </form>
     </div>
   </div>
@@ -46,16 +46,20 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .login {
-  background-color: steelblue;
+  background-image: url(~@/assets/login/cool-background.png);
+  background-size: contain;
+  
   color: #fff;
-  font-family: "Muli", sans-serif;
+  font-family: "楷体", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +69,7 @@ export default {
   margin: 0;
 
   .container {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px 40px;
     border-radius: 5px;
   }
@@ -148,7 +152,9 @@ export default {
     color: lightblue;
     transform: translateY(-30px);
   }
-
+  p{
+    padding-top:10px
+  }
 
 }
 </style>
